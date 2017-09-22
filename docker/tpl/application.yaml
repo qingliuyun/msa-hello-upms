@@ -1,0 +1,29 @@
+# webserver
+server:
+  port: 8080
+  context-path: /{{ .Env.WEB_CONTEXT }}
+
+# template
+spring:
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+  jmx:
+    enabled: false
+upms:
+  url: {{ .Env.UPMS_URL }}
+  interceptor.patterns: /**/*.do,/
+
+dc:
+  sc:
+#在upms里面配置的项目编号
+    p-code: {{ .Env.UPMS_PCODE }}
+#本地upms项目访问地址
+    upms-url: {{ .Env.UPMS_URL }}
+#apiKey
+    api-key: {{ .Env.UPMS_API_KEY }}
+  cas:
+#本地应用项目访问地址
+    local-app-url: {{ .Env.LOCAL_URL }}
+#本地sso(cas)项目访问地址
+    cas-server-url: {{ .Env.CAS_URL }}

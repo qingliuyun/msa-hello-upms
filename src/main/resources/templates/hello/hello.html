@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>hello,upms</title>
+
+    <link rel="stylesheet" th:href="${upms.url}+'/styles/bootstrap.min.css'"/>
+    <link rel="stylesheet" th:href="${upms.url}+'/styles/common.css'"/>
+    <link rel="stylesheet" th:href="@{/lib/css/validate.css}"/>
+
+</head>
+<style>
+
+</style>
+<body>
+
+<!-- 内容区域 -->
+<div >
+        hello,upms!
+</div>
+
+<script th:src="@{/lib/js/jquery.1.11.1.min.js}"></script>
+<script th:src="@{/lib/js/bootstrap.min.js}"></script>
+<script th:src="${upms.url}+'/scripts/common.js'"></script>
+<script th:src="${upms.url}+'/assets/layer/layer.js'"></script>
+<script th:src="${upms.url}+'/assets/layPage/src/laypage.dev.js'"></script>
+<script th:src="@{/lib/js/jquery.validate.js}"></script>
+
+</body>
+</html>
